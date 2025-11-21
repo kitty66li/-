@@ -1,0 +1,147 @@
+// База данных книг
+const books = [
+    {
+        id: 1,
+        title: "Мастер и Маргарита",
+        author: "Михаил Булгаков",
+        genre: "Классика",
+        price: 450,
+        image: "assets/images/master.jpg",
+        description: "Великий роман о любви, искусстве и борьбе добра со злом",
+        year: 1967,
+        pages: 480,
+        inStock: true
+    },
+    {
+        id: 2,
+        title: "1984",
+        author: "Джордж Оруэлл",
+        genre: "Фантастика",
+        price: 380,
+        image: "assets/images/1984.jpg",
+        description: "Антиутопия о тоталитарном обществе будущего",
+        year: 1949,
+        pages: 320,
+        inStock: true
+    },
+    {
+        id: 3,
+        title: "Преступление и наказание",
+        author: "Фёдор Достоевский",
+        genre: "Классика",
+        price: 520,
+        image: "assets/images/crime.jpg",
+        description: "Философский роман о морали и redemption",
+        year: 1866,
+        pages: 592,
+        inStock: true
+    },
+    {
+        id: 4,
+        title: "Гарри Поттер и философский камень",
+        author: "Джоан Роулинг",
+        genre: "Фантастика",
+        price: 690,
+        image: "assets/images/harry.jpg",
+        description: "Первая книга культовой серии о юном волшебнике",
+        year: 1997,
+        pages: 432,
+        inStock: true
+    },
+    {
+        id: 5,
+        title: "Убийство в Восточном экспрессе",
+        author: "Агата Кристи",
+        genre: "Детектив",
+        price: 350,
+        image: "assets/images/orient.jpg",
+        description: "Знаменитый детектив с Эркюлем Пуаро",
+        year: 1934,
+        pages: 256,
+        inStock: true
+    },
+    {
+        id: 6,
+        title: "Война и мир",
+        author: "Лев Толстой",
+        genre: "Классика",
+        price: 780,
+        image: "assets/images/war.jpg",
+        description: "Эпопея о жизни русского общества во время войны с Наполеоном",
+        year: 1869,
+        pages: 1225,
+        inStock: false
+    },
+    {
+        id: 7,
+        title: "Три товарища",
+        author: "Эрих Мария Ремарк",
+        genre: "Роман",
+        price: 420,
+        image: "assets/images/three.jpg",
+        description: "История дружбы и любви в послевоенной Германии",
+        year: 1936,
+        pages: 384,
+        inStock: true
+    },
+    {
+        id: 8,
+        title: "Атлант расправил плечи",
+        author: "Айн Рэнд",
+        genre: "Бизнес",
+        price: 890,
+        image: "assets/images/atlas.jpg",
+        description: "Философский роман о предпринимателях и творцах",
+        year: 1957,
+        pages: 1168,
+        inStock: true
+    },
+    {
+        id: 9,
+        title: "Маленький принц",
+        author: "Антуан де Сент-Экзюпери",
+        genre: "Классика",
+        price: 290,
+        image: "assets/images/prince.jpg",
+        description: "Философская сказка для детей и взрослых",
+        year: 1943,
+        pages: 96,
+        inStock: true
+    },
+    {
+        id: 10,
+        title: "Шерлок Холмс: Собрание сочинений",
+        author: "Артур Конан Дойл",
+        genre: "Детектив",
+        price: 1250,
+        image: "assets/images/holmes.jpg",
+        description: "Полное собрание рассказов о великом детективе",
+        year: 1892,
+        pages: 1088,
+        inStock: true
+    },
+    {
+        id: 11,
+        title: "Гордость и предубеждение",
+        author: "Джейн Остин",
+        genre: "Роман",
+        price: 320,
+        image: "assets/images/pride.jpg",
+        description: "Классика английской литературы о любви и социальных условностях",
+        year: 1813,
+        pages: 432,
+        inStock: true
+    },
+    {
+        id: 12,
+        title: "Код да Винчи",
+        author: "Дэн Браун",
+        genre: "Детектив",
+        price: 480,
+        image: "assets/images/davinci.jpg",
+        description: "Интеллектуальный триллер о тайнах истории",
+        year: 2003,
+        pages: 489,
+        inStock: true
+    }
+];
