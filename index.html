@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Книжный магазин "Читай-Город"</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>📚 Читай-Город</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#products">Книги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cart-section">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Корзина 
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
+    <!-- Главный баннер -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Добро пожаловать в мир книг!</h2>
+            <p>Откройте для себя лучшие произведения мировой литературы</p>
+            <button class="cta-button" onclick="scrollToProducts()">Смотреть книги</button>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="filters">
+        <div class="container">
+            <input type="text" id="search-input" placeholder="🔍 Поиск книг..." onkeyup="filterBooks()">
+            <select id="genre-filter" onchange="filterBooks()">
+                <option value="">Все жанры</option>
+                <option value="Фантастика">Фантастика</option>
+                <option value="Детектив">Детектив</option>
+                <option value="Роман">Роман</option>
+                <option value="Классика">Классика</option>
+                <option value="Бизнес">Бизнес</option>
+            </select>
+            <select id="price-filter" onchange="filterBooks()">
+                <option value="">Любая цена</option>
+                <option value="0-500">до 500 руб</option>
+                <option value="500-1000">500-1000 руб</option>
+                <option value="1000-2000">1000-2000 руб</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Каталог книг -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Наши книги</h2>
+            <div class="books-grid" id="books-container">
+                <!-- Книги будут загружены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нашем магазине</h2>
+            <p>Мы предлагаем широкий выбор книг различных жанров. От классической литературы до современных бестселлеров - у нас найдется книга для каждого читателя.</p>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <p>📞 Телефон: +7 (999) 123-45-67</p>
+                <p>📧 Email: info@read-city.ru</p>
+                <p>📍 Адрес: г. Москва, ул. Книжная, д. 15</p>
+                <p>🕒 Время работы: 9:00 - 21:00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Книжный магазин "Читай-Город". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 Ваша корзина</h2>
+                <span class="close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Товары корзины -->
+                </div>
+                <div class="cart-total">
+                    <strong>Итого: <span id="cart-total-price">0</span> руб</strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+                <button class="clear-cart-btn" onclick="clearCart()">Очистить корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="books.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
